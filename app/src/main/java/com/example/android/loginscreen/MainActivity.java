@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          *  botão de login
-         *  efefefwefwefwefwefew
          */
         cardEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
