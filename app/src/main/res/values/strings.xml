@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Shift Work Manager</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="background">background</string>
+    <string name="esqueceu_se_da_password">Esqueceu-se da Password?</string>
+    <string name="c_digo_empresa">Código Empresa</string>
+    <string name="email">Email</string>
+    <string name="nome">Nome</string>
+    <string name="registar">Registar</string>
+    <string name="registo">Registo</string>
+    <string name="backarrow">backarrow</string>
+    <string name="entrar">Entrar</string>
+    <string name="ainda_n_o_tem_uma_conta">Ainda não tem uma conta?</string>
+    <string name="registe_se">Registe-se</string>
+    <string name="insira_o_seu_email">Insira o seu email</string>
+    <string name="confirme_email">Confirme Email</string>
+    <string name="enviar_password">Enviar Password</string>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.loginscreen.RegistarActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/backarrow"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/back_arrow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/tvRegisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="@string/registo"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="172dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="textPersonName"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNome"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:layout_marginTop="7dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etConfEmail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/confirme_email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etCodigo"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etConfEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/c_digo_empresa"
+        android:inputType="textPersonName"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCodigo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardConf"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/cardBlue"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/registar"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

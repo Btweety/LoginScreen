@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.loginscreen.EsquecerActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvInsiraEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="@string/insira_o_seu_email"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="55dp"
+        android:textSize="25sp"/>
+
+    <ImageView
+        android:id="@+id/backArrowEsquecer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="@+id/tvInsiraEmail"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/backarrow"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/back_arrow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:id="@+id/etEmailEsquecer"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:layout_marginTop="7dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/envPass"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etEmailEsquecer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/cardBlue"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Alterar Password"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

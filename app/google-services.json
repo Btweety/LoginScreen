@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "157683874605",
+    "firebase_url": "https://shift-work-manager-d4bf1.firebaseio.com",
+    "project_id": "shift-work-manager-d4bf1",
+    "storage_bucket": "shift-work-manager-d4bf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157683874605:android:c549a869d7ee2a19",
+        "android_client_info": {
+          "package_name": "com.example.android.loginscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157683874605-i70568qaunbcc8tkoik8dne44issvu8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.loginscreen",
+            "certificate_hash": "5f596200891c2a9af1496906a5971372ed689b6c"
+          }
+        },
+        {
+          "client_id": "157683874605-mpflll03rpj87r5k36mojlebl51sbuti.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "157683874605-mpflll03rpj87r5k36mojlebl51sbuti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDenr4WhupDY8UFalH8MN0Oj_bdwL-4Ca4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157683874605-mpflll03rpj87r5k36mojlebl51sbuti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
