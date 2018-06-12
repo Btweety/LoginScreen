@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initialize();
         firebaseAuth = FirebaseAuth.getInstance();
+
+        /**Verificar se algum utilizador já está logged in e se estiver mandá-lo automaticamente para a Home Activity */
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            finish();
+        }
+
 
         /**
          *  botão de login

@@ -17,4 +17,11 @@
         <item name="fontFamily">@font/opensansbold</item>
     </style> -->
 
+
+    <style name="NavigationViewStyle" parent="AppTheme">
+        <item name="android:textSize">18sp</item> <!-- menu item text size-->
+        <item name="listPreferredItemHeightSmall">40dp</item> <!-- menu item height-->
+
+    </style>
+
 </resources>
