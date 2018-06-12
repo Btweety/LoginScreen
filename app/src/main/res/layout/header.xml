@@ -12,7 +12,9 @@
             android:layout_height="wrap_content"
             android:text="@string/nome_da_empresa"
             android:layout_centerInParent="true"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:drawableRight="@drawable/ic_expand_more_black_24dp"
+            android:drawablePadding="20dp"/>
 
     </RelativeLayout>
 
