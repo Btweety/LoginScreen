@@ -12,9 +12,7 @@
         android:layout_height="match_parent"
         android:id="@+id/navView"
         app:headerLayout="@layout/header"
-        app:menu="@menu/nav_menu"
-        >
-
+        app:menu="@menu/nav_menu">
     </android.support.design.widget.NavigationView>
 
     <LinearLayout
@@ -22,8 +20,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/container">
-
     </LinearLayout>
-
 
 </android.support.v4.widget.DrawerLayout>

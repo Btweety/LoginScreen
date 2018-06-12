@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(MainActivity.this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         }
                         else{
                             Toast.makeText(MainActivity.this, "Email ou Password errados", Toast.LENGTH_SHORT).show();
