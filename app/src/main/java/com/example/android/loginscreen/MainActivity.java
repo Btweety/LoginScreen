@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-
         /**
          *  botão de login
          */

@@ -13,10 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
-import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.android.loginscreen.fragments.HomePageFragment;
+import com.example.android.loginscreen.fragments.HorariosFragment;
+import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -62,10 +63,10 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentClass = HomePageFragment.class;
                         break;
                     case R.id.nav_item_horario:
-                        //menu2
+                        fragmentClass = HorariosFragment.class;
                         break;
                     case R.id.nav_item_pedidostroca:
-                        //menu3
+                        fragmentClass = PedidosTrocaFragment.class;
                         break;
                 }
                 /** instanciar o fragmento **/
