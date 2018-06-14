@@ -25,71 +25,85 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_horario_semanal"
             android:layout_centerHorizontal="true">
-            <TableRow
-                android:id="@+id/headerRow">
+
+            <TableRow android:id="@+id/headerRow">
 
                 <TextView
                     android:id="@+id/tv_segunda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/cell_top_eft"
+                    android:gravity="center_horizontal"
                     android:padding="5dp"
-                    android:text="2ªf\ndia 1"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="2ªf\ndia 21"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_terca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_grey"
+                    android:gravity="center_horizontal"
                     android:padding="5dp"
-                    android:text="3ªf\ndia 2"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="3ªf\ndia 22"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tv_quarta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_grey"
+                    android:gravity="center_horizontal"
                     android:padding="5dp"
-                    android:text="4ªf\ndia 4"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="4ªf\ndia 24"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_quinta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_grey"
+                    android:gravity="center_horizontal"
                     android:padding="5dp"
-                    android:text="5ªf\ndia 5"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="5ªf\ndia 25"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_sexta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:background="@drawable/cell_center_grey"
                     android:padding="5dp"
-                    android:text="6ªf\ndia 6"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="6ªf\ndia 26"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_sabado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:background="@drawable/cell_center_grey"
                     android:padding="5dp"
-                    android:text="Sab\ndia 7"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="Sab\ndia 27"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_domingo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:background="@drawable/cell_top_right"
                     android:padding="5dp"
-                    android:text="Dom\ndia 8"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="Dom\ndia 28 "
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
