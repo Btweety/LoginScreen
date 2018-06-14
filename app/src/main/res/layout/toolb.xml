@@ -16,8 +16,10 @@
             android:layout_height="wrap_content"
             android:text="Shifts"
             android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:paddingEnd="70dp"
             android:id="@+id/toolbar_title"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textColor="@color/dark"/>
 
         <ImageView
@@ -26,7 +28,7 @@
             android:id="@+id/toolbar_bell"
             android:src="@drawable/notifications"
             android:layout_alignParentEnd="true"
-            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
             />
 
 

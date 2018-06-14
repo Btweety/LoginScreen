@@ -80,8 +80,7 @@ public class HomeActivity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 
-                /** mudar a cor do texto do menu e fechar o menu **/
-                item.setChecked(true);
+                /** fecha o menu **/
                 drawerLayout.closeDrawers();
                 return true;
             }
