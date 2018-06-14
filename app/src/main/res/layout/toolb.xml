@@ -12,15 +12,16 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shifts"
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/open_sans"
             android:paddingEnd="70dp"
-            android:id="@+id/toolbar_title"
-            android:textSize="22sp"
-            android:textColor="@color/dark"/>
+            android:text="Shifts"
+            android:textColor="@color/dark"
+            android:textSize="22sp" />
 
         <ImageView
             android:layout_width="wrap_content"
