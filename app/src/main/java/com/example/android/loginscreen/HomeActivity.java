@@ -1,10 +1,12 @@
 package com.example.android.loginscreen;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
 
         /** Inicializar cada uma das variáveis com findViewById */
         initialize();
@@ -68,23 +71,32 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.nav_item_pedidostroca:
                         fragmentClass = PedidosTrocaFragment.class;
                         break;
+                    case R.id.nav_item_teste:
+                        startActivity(new Intent(HomeActivity.this, TrocaActivity.class));
+                        break;
                 }
                 /** instanciar o fragmento **/
                 try {
                     fragment = (Fragment) fragmentClass.newInstance();
+
+                    /** colocar o fragmento no container da pagina principal **/
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-                /** colocar o fragmento no container da pagina principal **/
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+
 
                 /** fecha o menu **/
                 drawerLayout.closeDrawers();
                 return true;
             }
         });
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, new HomePageFragment());
+        transaction.commit();
     }
 
     @Override

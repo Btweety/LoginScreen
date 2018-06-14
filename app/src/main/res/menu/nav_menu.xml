@@ -21,4 +21,11 @@
          android:title="@string/pedidos_de_troca" />
     </group>
 
+    <group
+        android:id="@+id/navigation_drawer_group_teste"
+        >
+        <item android:id="@+id/nav_item_teste"
+            android:title="ACTIVITY TROCA" />
+    </group>
+
 </menu>
