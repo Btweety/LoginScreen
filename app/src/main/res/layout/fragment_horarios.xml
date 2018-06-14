@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HorariosFragment">
 
     <TextView
@@ -15,12 +16,14 @@
         android:textSize="30sp"
         android:textColor="@color/dark"/>
 
-    <CalendarView
+    <com.applandeo.materialcalendarview.CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/texto_horario"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
-
+        android:layout_marginTop="30dp"
+        app:headerColor="@color/white"
+        app:headerLabelColor="@color/dark"
+        app:
+        />
 </RelativeLayout>
