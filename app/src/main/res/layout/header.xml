@@ -5,24 +5,20 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="120dp">
 
         <TextView
             android:id="@+id/tvNomeEmpresa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableEnd="@drawable/showmore"
+            android:drawablePadding="24dp"
             android:paddingEnd="40dp"
             android:text="@string/nome_da_empresa"
-            android:layout_centerInParent="true"
-            android:textSize="20sp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:paddingTop="60dp"
-            android:layout_alignEnd="@+id/tvNomeEmpresa"
-            />
+            android:textAlignment="center"
+            android:textColor="@color/dark"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
