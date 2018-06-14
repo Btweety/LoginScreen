@@ -14,7 +14,7 @@
             android:layout_centerInParent="true"
             android:drawableEnd="@drawable/showmore"
             android:drawablePadding="24dp"
-            android:paddingEnd="40dp"
+            android:paddingStart="48dp"
             android:text="@string/nome_da_empresa"
             android:textAlignment="center"
             android:textColor="@color/dark"

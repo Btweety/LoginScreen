@@ -1,4 +1,4 @@
-package com.example.android.loginscreen;
+package com.example.android.loginscreen.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.android.loginscreen.R;
 
 public class PedidosTrocaFragment extends Fragment {
     @Override

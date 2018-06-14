@@ -13,10 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
-import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.android.loginscreen.fragments.HomePageFragment;
+import com.example.android.loginscreen.fragments.HorariosFragment;
+import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
