@@ -23,8 +23,12 @@
             android:screenOrientation="userPortrait" />
         <activity
             android:name=".EsquecerActivity"
-            android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".HomeActivity"></activity>
+            android:screenOrientation="userPortrait">
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="userPortrait">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

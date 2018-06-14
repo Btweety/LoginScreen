@@ -9,5 +9,6 @@
     <style name="NavigationViewStyle" parent="AppTheme">
         <item name="android:textSize">18sp</item> <!-- menu item text size-->
         <item name="listPreferredItemHeightSmall">40dp</item> <!-- menu item height-->
+        <item name="android:fontFamily">@font/open_sans</item>
     </style>
 </resources>
