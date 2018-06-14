@@ -32,7 +32,7 @@
                     android:id="@+id/tv_segunda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cell_topLeft"
+                    android:background="@drawable/cell_top_eft"
                     android:padding="5dp"
                     android:text="2ªf\ndia 1"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
