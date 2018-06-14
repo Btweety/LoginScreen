@@ -7,14 +7,31 @@
     android:id="@+id/nav_action"
     android:backgroundTint="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shifts"
-        android:layout_gravity="center"
-        android:id="@+id/toolbar_title"
-        android:textSize="18sp"
-        android:textColor="@color/dark"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shifts"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/toolbar_title"
+            android:textSize="18sp"
+            android:textColor="@color/dark"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_bell"
+            android:src="@drawable/notifications"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="20dp"
+            />
+
+
+    </RelativeLayout>
+
 
 
 </android.support.v7.widget.Toolbar>
