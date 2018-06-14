@@ -24,6 +24,5 @@
         android:layout_marginTop="30dp"
         app:headerColor="@color/white"
         app:headerLabelColor="@color/dark"
-        app:
         />
 </RelativeLayout>
