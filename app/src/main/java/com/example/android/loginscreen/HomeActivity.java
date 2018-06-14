@@ -62,10 +62,10 @@ public class HomeActivity extends AppCompatActivity {
                         fragmentClass = HomePageFragment.class;
                         break;
                     case R.id.nav_item_horario:
-                        //menu2
+                        fragmentClass = HorariosFragment.class;
                         break;
                     case R.id.nav_item_pedidostroca:
-                        //menu3
+                        fragmentClass = PedidosTrocaFragment.class;
                         break;
                 }
                 /** instanciar o fragmento **/
