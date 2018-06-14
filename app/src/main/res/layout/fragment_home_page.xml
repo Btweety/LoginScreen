@@ -10,7 +10,297 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_horario_semanal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horário Semanal"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/dark"
+            android:layout_centerHorizontal="true"/>
+
+        <TableLayout
+            android:id="@+id/tl_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_horario_semanal"
+            android:layout_centerHorizontal="true">
+            <TableRow
+                android:id="@+id/headerRow">
+
+                <TextView
+                    android:id="@+id/tv_segunda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_top_eft"
+                    android:padding="5dp"
+                    android:text="2ªf\ndia 1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_terca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_grey"
+                    android:padding="5dp"
+                    android:text="3ªf\ndia 2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_quarta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_grey"
+                    android:padding="5dp"
+                    android:text="4ªf\ndia 4"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_quinta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_grey"
+                    android:padding="5dp"
+                    android:text="5ªf\ndia 5"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_sexta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_grey"
+                    android:padding="5dp"
+                    android:text="6ªf\ndia 6"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_sabado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_grey"
+                    android:padding="5dp"
+                    android:text="Sab\ndia 7"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_domingo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_top_right"
+                    android:padding="5dp"
+                    android:text="Dom\ndia 8"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/morningRow">
+                <TextView
+                    android:id="@+id/tv_segmanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="seg\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_termanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="ter\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quamanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="qua\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quimanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="qui\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sexmanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="sex\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sabmanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="sab\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_dommanha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="dom\nManha"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/eveningRow">
+                <TextView
+                    android:id="@+id/tv_segtarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="seg\nTarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_tertarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="ter\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quatarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="qua\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quitarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="qui\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sextarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="sex\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sabtarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="sab\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_domtarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_dark"
+                    android:padding="5dp"
+                    android:text="dom\ntarde"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/nightRow"> // ¯\_(ツ)_/¯
+                <TextView
+                    android:id="@+id/tv_segnoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_bottom_left"
+                    android:padding="5dp"
+                    android:text="seg\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_ternoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="ter\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quanoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="qua\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_quinoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="qui\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sexnoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="sex\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_sabnoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_center_light"
+                    android:padding="5dp"
+                    android:text="sab\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/tv_domnoite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_bottom_right"
+                    android:padding="5dp"
+                    android:text="dom\nNoite"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+        </TableLayout>
+        <TextView
             android:id="@+id/tv_espera_confirmacao"
+            android:layout_below="@+id/tl_table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="À espera da sua aprovação"
@@ -32,14 +322,7 @@
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
             </android.support.v7.widget.RecyclerView>
-
         </android.support.v7.widget.CardView>
-
-
     </RelativeLayout>
-
-
-
 </ScrollView>
