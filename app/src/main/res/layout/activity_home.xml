@@ -7,8 +7,6 @@
     tools:context=".HomeActivity"
     android:id="@+id/drawerLayout">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,10 +18,7 @@
             android:orientation="vertical"
             android:layout_below="@+id/nav_action"
             android:id="@+id/container">
-
         </LinearLayout>
-
-
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -32,7 +27,6 @@
             <include
                 layout="@layout/toolb" />
         </android.support.design.widget.AppBarLayout>
-
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
@@ -45,6 +39,5 @@
         android:layout_gravity ="start"
         android:fitsSystemWindows="true">
     </android.support.design.widget.NavigationView>
-
 
 </android.support.v4.widget.DrawerLayout>
