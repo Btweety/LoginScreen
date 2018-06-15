@@ -33,7 +33,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".TrocaActivity" />
-        <activity android:name=".DiaHorarioActivity"></activity>
+        <activity android:name=".DiaHorarioActivity" />
+        <activity android:name=".SubmeterTrocaActivity"></activity>
     </application>
 
 </manifest>

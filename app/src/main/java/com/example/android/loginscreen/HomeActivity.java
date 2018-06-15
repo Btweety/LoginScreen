@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private NavigationView navigationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -73,6 +73,9 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_item_teste:
                         startActivity(new Intent(HomeActivity.this, TrocaActivity.class));
+                        break;
+                    case R.id.nav_item_teste2:
+                        startActivity(new Intent(HomeActivity.this, SubmeterTrocaActivity.class));
                         break;
                 }
                 /** instanciar o fragmento **/

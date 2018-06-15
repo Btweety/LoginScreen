@@ -15,7 +15,10 @@
 
 
         <item android:id="@+id/nav_item_teste"
-            android:title="ACTIVITY TROCA" />
+            android:title="TROCA RECEBIDA" />
+
+        <item android:id="@+id/nav_item_teste2"
+            android:title="SUBMETER TROCA" />
     </group>
 
     <group
