@@ -11,4 +11,13 @@
         <item name="listPreferredItemHeightSmall">40dp</item> <!-- menu item height-->
         <item name="android:fontFamily">@font/open_sans</item>
     </style>
+    <style name="tabelaGrey" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/cell_center_grey</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
