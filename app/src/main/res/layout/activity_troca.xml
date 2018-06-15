@@ -1,42 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TrocaActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/appbar">
-        <include
-            layout="@layout/toolb" />
-    </android.support.design.widget.AppBarLayout>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_numero_troca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/appbar"
-        android:layout_marginTop="20dp"
-        android:text="Troca nºX"
-        android:textSize="28sp"
-        android:textColor="@color/dark"
-        />
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbar">
+            <include
+                layout="@layout/toolb" />
+        </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_pedidos"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_below="@+id/tv_numero_troca"
-        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tv_numero_troca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/appbar"
+            android:layout_marginTop="20dp"
+            android:text="Troca nºX"
+            android:textSize="28sp"
+            android:textColor="@color/dark"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_pedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/tv_numero_troca"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_troca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
 
 
-    </android.support.v7.widget.CardView>
 
-</RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_esquerda"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image_left"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/profile"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"/>
+
+                        <TextView
+                            android:id="@+id/nome_left"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_image_left"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Henrique Pires"
+                            android:textSize="16sp"
+                            android:maxLines="2"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:id="@+id/turno_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Turno da manhã"
+                            android:layout_below="@id/nome_left"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/dark"/>
+                        <TextView
+                            android:id="@+id/horas_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9h00 - 13h00"
+                            android:layout_below="@id/turno_left"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/dark"/>
+                        <TextView
+                            android:id="@+id/data_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3ºf - 26 de Maio"
+                            android:layout_below="@id/horas_left"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/dark"/>
+
+                        <TextView
+                            android:id="@+id/empresa_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bee Engineering"
+                            android:layout_below="@id/data_left"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/dark"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layout_direita"
+                        android:layout_weight="1">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image_right"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/profile"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"/>
+
+                        <TextView
+                            android:id="@+id/nome_right"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/profile_image_right"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Joana Silva"
+                            android:textSize="16sp"
+                            android:maxLines="2"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:id="@+id/turno_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Turno da manhã"
+                            android:layout_below="@id/nome_right"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/dark"
+                            android:layout_alignParentRight="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/horas_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9h00 - 13h00"
+                            android:layout_below="@id/turno_right"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/dark"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:id="@+id/data_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3ºf - 26 de Maio"
+                            android:layout_below="@id/horas_right"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/dark"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:id="@+id/empresa_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bee Engineering"
+                            android:layout_below="@id/data_right"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/dark"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_info_adicionais"
+                    android:layout_below="@+id/linear_layout_troca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_info_adicionais"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Informações adicionais"
+                        android:textColor="@color/dark"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_info_adicionais"
+                        android:maxLines="6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et dictum ligula, a fermentum turpis. Quisque maximus mi et turpis molestie suscipit. Nulla porta turpis eget est hendrerit, at pretium urna euismod. Phasellus luctus luctus orci, at tempus magna. Aliquam congue leo ut est semper"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/layout_info_adicionais"
+                    android:id="@+id/linear_layout_troca_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/layout_info_adicionais"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/cardRejeitar"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="10dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rejeitar Proposta"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textAlignment="center"/>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/layout_info_adicionais"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/cardAceitar"
+                            android:layout_centerInParent="true"
+                            app:cardCornerRadius="10dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aceitar Proposta"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textAlignment="center"/>
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</ScrollView>
