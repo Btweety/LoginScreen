@@ -16,13 +16,11 @@
         android:textSize="30sp"
         android:textColor="@color/dark"/>
 
-    <com.applandeo.materialcalendarview.CalendarView
+    <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/texto_horario"
         android:layout_marginTop="30dp"
-        app:headerColor="@color/white"
-        app:headerLabelColor="@color/dark"
         />
 </RelativeLayout>
