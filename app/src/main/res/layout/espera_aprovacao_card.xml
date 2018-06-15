@@ -2,83 +2,87 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_aprovacao_card"
+    android:layout_marginTop="20dp"
+    android:layout_margin="5dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/im_foto"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_margin="5dp"
-        android:src="@drawable/dummyphoto1"/>
-    <TextView
-        android:id="@+id/tv_nome_foto"
-        android:layout_below="@id/im_foto"
-        android:layout_width="65dp"
-        android:layout_marginStart="5dp"
-        android:layout_height="wrap_content"
-        android:text="Quim Barreiros"
-        android:textSize="12sp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im_foto"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/dummyphoto1"/>
+        <TextView
+            android:id="@+id/tv_nome_foto"
+            android:layout_below="@id/im_foto"
+            android:layout_width="65dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:text="Quim Barreiros"
+            android:textAlignment="center"
+            android:textSize="12sp"/>
 
-    <ImageView
-        android:id="@+id/im_barra_vertical"
-        android:layout_toEndOf="@+id/tv_nome_foto"
-        android:layout_width="1dp"
-        android:layout_marginTop="2.5dp"
-        android:background="@color/dark"
-        android:layout_height="95dp" />
+        <ImageView
+            android:id="@+id/im_barra_vertical"
+            android:layout_toEndOf="@+id/tv_nome_foto"
+            android:layout_width="1dp"
+            android:layout_marginTop="2.5dp"
+            android:background="@color/dark"
+            android:layout_height="95dp" />
 
-    <LinearLayout
-        android:id="@+id/ll_layout_textos"
-        android:padding="10dp"
-        android:layout_toEndOf="@id/im_barra_vertical"
-        android:layout_width="230dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:paddingBottom="5dp"
-            android:textSize="10sp"
-            android:layout_height="wrap_content"
-            android:text="Turno da Manha - 9h00 ás 13h00"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:text="Terça Feira dia 21 de Maio de 2018"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:paddingBottom="5dp"
-            android:textSize="10sp"
-            android:layout_height="wrap_content"
-            android:text="Bee engineering"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:text="Preferencia: noite"/>
-    </LinearLayout>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_pendente"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_toEndOf="@+id/ll_layout_textos"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        app:cardBackgroundColor="@color/cardBlue"
-        app:cardCornerRadius="2dp"
-        app:cardElevation="1dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_layout_textos"
+            android:padding="10dp"
+            android:layout_toEndOf="@id/im_barra_vertical"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <TextView
+                android:id="@+id/turno_aprove"
+                android:layout_width="wrap_content"
+                android:paddingBottom="5dp"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:text="Turno da Manha - 9h00 ás 13h00"/>
+            <TextView
+                android:id="@+id/data_aprove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:textSize="10sp"
-                android:text="Pendente"
-                android:textColor="@color/white"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+                android:text="Terça Feira dia 21 de Maio de 2018"/>
+
+            <TextView
+                android:id="@+id/preferencia_aprove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Preferencia: noite"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_pendente"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/ll_layout_textos"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="@color/cardBlue"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="1dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="10sp"
+                    android:text="Pendente"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
 
 </RelativeLayout>

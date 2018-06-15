@@ -41,5 +41,8 @@ dependencies {
 
     /** Library do calendário */
     implementation 'com.github.alamkanak:android-week-view:1.2.6'
+
+    /** Ler imagens */
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
 apply plugin: 'com.google.gms.google-services'
