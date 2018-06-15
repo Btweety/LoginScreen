@@ -23,16 +23,17 @@
             android:screenOrientation="userPortrait" />
         <activity
             android:name=".EsquecerActivity"
-            android:screenOrientation="userPortrait"></activity>
+            android:screenOrientation="userPortrait" />
         <activity
             android:name=".HomeActivity"
-            android:screenOrientation="userPortrait"></activity>
+            android:screenOrientation="userPortrait" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".TrocaActivity"></activity>
+        <activity android:name=".TrocaActivity" />
+        <activity android:name=".DiaHorarioActivity"></activity>
     </application>
 
 </manifest>
