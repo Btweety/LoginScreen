@@ -24,8 +24,8 @@
             android:id="@+id/tl_table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_horario_semanal"
-            android:layout_centerHorizontal="true">
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/tv_horario_semanal">
             <TableRow android:id="@+id/headerRow">
                 <LinearLayout
                     android:background="@drawable/cell_top_eft"
