@@ -26,9 +26,11 @@ public class HomePageFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view_home_page);
 
+        /** Dar um tipo de layout à recyclerview */
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(),1);
         recyclerView.setLayoutManager(mLayoutManager);
 
+        /** Criar dados de teste para povoar a recyclerview a partir do seu adapter */
         ArrayList<Aprove> listaDeAproves = new ArrayList<Aprove>();
         for (int i = 0; i < 6; i++){
             String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
@@ -39,6 +41,7 @@ public class HomePageFragment extends Fragment {
             listaDeAproves.add(new Aprove(userFoto, userName, turno, data, preferencia));
         }
 
+        /** Povoar a recyclerview */
         recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
 
 
