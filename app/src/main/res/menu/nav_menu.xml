@@ -5,27 +5,32 @@
         >
         <item android:id="@+id/nav_item_home"
             android:title="@string/home" />
-    </group>
 
-    <group
-        android:id="@+id/navigation_drawer_group_horario"
-        >
         <item android:id="@+id/nav_item_horario"
             android:title="@string/hor_rio" />
-    </group>
 
-    <group
-        android:id="@+id/navigation_drawer_group_pedidos"
-        >
+
         <item android:id="@+id/nav_item_pedidostroca"
          android:title="@string/pedidos_de_troca" />
-    </group>
 
-    <group
-        android:id="@+id/navigation_drawer_group_teste"
-        >
+
         <item android:id="@+id/nav_item_teste"
             android:title="ACTIVITY TROCA" />
     </group>
+
+    <group
+        android:id="@+id/navigation_drawer_group_two">
+
+        <item android:id="@+id/nav_item_logout"
+            android:title="Terminar sessão"
+           />
+
+        <item android:id="@+id/nav_item_settings"
+            android:title="Definições" />
+
+    </group>
+
+
+
 
 </menu>
