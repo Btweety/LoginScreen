@@ -11,13 +11,70 @@
         <item name="listPreferredItemHeightSmall">40dp</item> <!-- menu item height-->
         <item name="android:fontFamily">@font/open_sans</item>
     </style>
-    <style name="tabelaGrey" parent="AppTheme">
+
+    <!-- Estilo do header da tabela (2ªf, 3ªf, 4ªf, etc...) -->
+    <style name="tabelaGreySemana" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/cell_center_grey</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:padding">4dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <!-- Estilo do header da tabela (dia 1, dia 2, dia 30, etc...) -->
+    <style name="tabelaGreyDia" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Estilo da primeira linha da tabela (depois do header, azul claro) -->
+    <style name="tabelaLightBlueCenter" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/cell_center_light</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_marginEnd">1dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+    </style>
+
+    <!-- Estilo da segunda linha da tabela (depois do header, azul escuro) -->
+    <style name="tabelaDarkBlueCenter" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/cell_center_dark</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_marginEnd">1dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+    </style>
+
+    <!-- Estilo da ultima linha da tabela -->
+    <style name="tabelaLightBlueBottom" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:layout_marginEnd">1dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+    </style>
+
+    <!-- Estilo do linear layout do header da tabela -->
+    <style name="linLayout" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginEnd">1dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+    </style>
+
 </resources>

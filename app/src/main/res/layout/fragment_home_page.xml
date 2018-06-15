@@ -25,290 +25,202 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_horario_semanal"
             android:layout_centerHorizontal="true">
-
             <TableRow android:id="@+id/headerRow">
-
-                <TextView
-                    android:id="@+id/tv_segunda"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:background="@drawable/cell_top_eft"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="2ªf\ndia 21"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_segundaF"
+                        style="@style/tabelaGreySemana"
+                        android:text="2ªf"/>
+                    <TextView
+                        android:id="@+id/tv_segunda"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 10"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_terca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:background="@drawable/cell_center_grey"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="3ªf\ndia 22"
-                    android:textSize="16dp"
-                    android:textStyle="bold"/>
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_tercaF"
+                        style="@style/tabelaGreySemana"
+                        android:text="3ªf"/>
+                    <TextView
+                        android:id="@+id/tv_terca"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 11"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_quarta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:background="@drawable/cell_center_grey"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="4ªf\ndia 24"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_quartaF"
+                        style="@style/tabelaGreySemana"
+                        android:text="4ªf"/>
+                    <TextView
+                        android:id="@+id/tv_quarta"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 12"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_quinta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <LinearLayout
                     android:background="@drawable/cell_center_grey"
-                    android:gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:text="5ªf\ndia 25"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_quintaF"
+                        style="@style/tabelaGreySemana"
+                        android:text="5ªf"/>
+                    <TextView
+                        android:id="@+id/tv_quinta"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 13"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_sexta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                <LinearLayout
                     android:background="@drawable/cell_center_grey"
-                    android:padding="5dp"
-                    android:text="6ªf\ndia 26"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_sextaF"
+                        style="@style/tabelaGreySemana"
+                        android:text="6ªf"/>
+                    <TextView
+                        android:id="@+id/tv_sexta"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 13"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_sabado"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                <LinearLayout
                     android:background="@drawable/cell_center_grey"
-                    android:padding="5dp"
-                    android:text="Sab\ndia 27"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_sabadoF"
+                        style="@style/tabelaGreySemana"
+                        android:text="Sab"/>
+                    <TextView
+                        android:id="@+id/tv_sabado"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 13"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_domingo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
+                <LinearLayout
                     android:background="@drawable/cell_top_right"
-                    android:padding="5dp"
-                    android:text="Dom\ndia 28 "
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    style="@style/linLayout">
+                    <TextView
+                        android:id="@+id/tv_domingo"
+                        style="@style/tabelaGreySemana"
+                        android:text="Dom"/>
+                    <TextView
+                        android:id="@+id/tv_doming"
+                        style="@style/tabelaGreyDia"
+                        android:text="Dia 13"/>
+                </LinearLayout>
+
             </TableRow>
 
             <TableRow
                 android:id="@+id/morningRow">
                 <TextView
                     android:id="@+id/tv_segmanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="seg\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="seg\nManha"/>
                 <TextView
                     android:id="@+id/tv_termanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="ter\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="ter\nManha" />
                 <TextView
                     android:id="@+id/tv_quamanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="qua\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="qua\nManha" />
                 <TextView
                     android:id="@+id/tv_quimanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="qui\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="qui\nManha"/>
                 <TextView
                     android:id="@+id/tv_sexmanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="sex\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="sex\nManha" />
                 <TextView
                     android:id="@+id/tv_sabmanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="sab\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="sab\nManha"/>
                 <TextView
                     android:id="@+id/tv_dommanha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
-                    android:text="dom\nManha"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueCenter"
+                    android:text="dom\nManha"/>
             </TableRow>
-
 
             <TableRow
                 android:id="@+id/eveningRow">
                 <TextView
                     android:id="@+id/tv_segtarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="seg\nTarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="seg\nTarde"/>
                 <TextView
                     android:id="@+id/tv_tertarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="ter\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="ter\ntarde"/>
                 <TextView
                     android:id="@+id/tv_quatarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="qua\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="qua\ntarde"/>
                 <TextView
                     android:id="@+id/tv_quitarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="qui\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="qui\ntarde"/>
                 <TextView
                     android:id="@+id/tv_sextarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="sex\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="sex\ntarde"/>
                 <TextView
                     android:id="@+id/tv_sabtarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="sab\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="sab\ntarde"/>
                 <TextView
                     android:id="@+id/tv_domtarde"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cell_center_dark"
-                    android:padding="5dp"
-                    android:text="dom\ntarde"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaDarkBlueCenter"
+                    android:text="dom\ntarde"/>
             </TableRow>
 
             <TableRow
-                android:id="@+id/nightRow"> // ¯\_(ツ)_/¯
+                android:id="@+id/nightRow"> <!-- ¯\_(ツ)_/¯ -->
                 <TextView
                     android:id="@+id/tv_segnoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_bottom_left"
-                    android:padding="5dp"
                     android:text="seg\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
 
                 <TextView
                     android:id="@+id/tv_ternoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
                     android:text="ter\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_quanoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
                     android:text="qua\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_quinoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
                     android:text="qui\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_sexnoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
                     android:text="sex\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_sabnoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_center_light"
-                    android:padding="5dp"
                     android:text="sab\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_domnoite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_bottom_right"
-                    android:padding="5dp"
                     android:text="dom\nNoite"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    style="@style/tabelaLightBlueBottom"/>
             </TableRow>
 
         </TableLayout>
