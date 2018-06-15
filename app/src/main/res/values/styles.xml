@@ -17,8 +17,8 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:padding">2dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -27,7 +27,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <!-- Estilo da primeira linha da tabela (depois do header, azul claro) -->
@@ -36,8 +36,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/cell_center_light</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:padding">2dp</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:layout_marginEnd">1dp</item>
         <item name="android:layout_marginStart">1dp</item>
@@ -49,8 +49,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/cell_center_dark</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:padding">2dp</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:layout_marginEnd">1dp</item>
         <item name="android:layout_marginStart">1dp</item>
@@ -60,9 +60,9 @@
     <style name="tabelaLightBlueBottom" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:layout_marginEnd">1dp</item>
         <item name="android:layout_marginStart">1dp</item>
