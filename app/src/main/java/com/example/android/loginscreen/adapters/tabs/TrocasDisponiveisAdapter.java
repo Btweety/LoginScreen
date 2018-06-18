@@ -57,15 +57,12 @@ public class TrocasDisponiveisAdapter extends RecyclerView.Adapter<com.example.a
 
     @Override
     public void onBindViewHolder(com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter.TrocaViewHolder holder, final int position) {
-
         Picasso.with(context).load(aproves.get(position).getUserFoto()).fit().centerCrop().into(holder.foto);
         holder.nome.setText(aproves.get(position).getUserName());
         holder.turno.setText(aproves.get(position).getTurno());
         holder.data.setText(aproves.get(position).getData());
         holder.preferencia.setText(aproves.get(position).getPreferencia());
-
     }
-
 
     @Override
     public int getItemCount() {

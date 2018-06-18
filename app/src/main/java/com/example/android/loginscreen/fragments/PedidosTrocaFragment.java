@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.android.loginscreen.R;
 import com.example.android.loginscreen.adapters.home.AprovesAdapter;
+import com.example.android.loginscreen.adapters.tabs.PedidosRecentesAdapter;
 import com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter;
 import com.example.android.loginscreen.models.Aprove;
 
@@ -37,13 +38,18 @@ public class PedidosTrocaFragment extends Fragment {
 
         /** Criar dados de teste para povoar a recyclerview a partir do seu adapter */
         final ArrayList<Aprove> listaDeAproves = new ArrayList<Aprove>();
+        final ArrayList<Aprove> listaDeAprovesEspera = new ArrayList<Aprove>();
         for (int i = 0; i < 6; i++){
             String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
             String userName = "Pedro " + i;
             String turno = "Turno da manhã " + i;
             String data = "26 de Maio " + i;
             String preferencia = "Tarde " + i;
+            boolean isAproved = false;
+            if(i%2 == 0)
+                isAproved = true;
             listaDeAproves.add(new Aprove(userFoto, userName, turno, data, preferencia));
+            listaDeAprovesEspera.add(new Aprove(userFoto, userName, turno, data, preferencia, isAproved));
         }
 
         recyclerView.setAdapter(new TrocasDisponiveisAdapter(listaDeAproves, R.layout.troca_disponivel_card, getContext()));
@@ -59,11 +65,12 @@ public class PedidosTrocaFragment extends Fragment {
                         recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
                         break;
                     case 2:
+                        recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
                         break;
                     case 3:
+                        recyclerView.setAdapter(new PedidosRecentesAdapter(listaDeAprovesEspera, R.layout.pedidos_recentes_card, getContext()));
                         break;
                 }
-
             }
 
             @Override
