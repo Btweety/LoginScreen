@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.android.loginscreen.R;
 import com.example.android.loginscreen.adapters.AprovesAdapter;
 import com.example.android.loginscreen.models.Aprove;
@@ -43,8 +42,6 @@ public class HomePageFragment extends Fragment {
 
         /** Povoar a recyclerview */
         recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
-
-
         return view;
     }
 }

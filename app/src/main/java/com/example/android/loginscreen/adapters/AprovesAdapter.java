@@ -38,7 +38,6 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
             data = v.findViewById(R.id.data_aprove);
             preferencia = v.findViewById(R.id.preferencia_aprove);
         }
-
     }
 
     public AprovesAdapter(List<Aprove> aproves, int rowLayout, Context context) {
@@ -54,10 +53,8 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
         return new AproveViewHolder(view);
     }
 
-
     @Override
     public void onBindViewHolder(AproveViewHolder holder, final int position) {
-
         Picasso.with(context).load(aproves.get(position).getUserFoto()).fit().centerCrop().into(holder.foto);
         holder.nome.setText(aproves.get(position).getUserName());
         holder.turno.setText(aproves.get(position).getTurno());
@@ -65,8 +62,6 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
         holder.preferencia.setText(aproves.get(position).getPreferencia());
 
     }
-
-
     @Override
     public int getItemCount() {
         return aproves.size();

@@ -19,7 +19,6 @@
             android:textAlignment="center"
             android:textColor="@color/dark"
             android:textSize="20sp" />
-
     </RelativeLayout>
 
 </RelativeLayout>
