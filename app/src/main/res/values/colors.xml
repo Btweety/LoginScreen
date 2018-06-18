@@ -10,4 +10,5 @@
     <color name="cardRejeitar">#df4f3d</color>
     <color name="colorTransparent">#00ffffff</color>
     <color name="colorSwitch">#009688</color>
+    <color name="colorEspera">#63bede</color>
 </resources>

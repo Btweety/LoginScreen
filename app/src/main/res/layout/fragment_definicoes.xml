@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DefinicoesFragment">
 
     <RelativeLayout
@@ -14,40 +14,39 @@
             android:id="@+id/tv_definicoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:text="Definições"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:textColor="@color/dark"/>
+            android:text="Definições"
+            android:textColor="@color/dark"
+            android:textSize="22sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/definicoes_imagem"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/tv_definicoes"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:src="@drawable/profile"/>
+            android:src="@drawable/profile" />
 
         <TextView
             android:id="@+id/tv_nome_definicoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Henrique Pires"
-            android:textSize="22sp"
             android:layout_below="@+id/definicoes_imagem"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/dark"
             android:layout_marginTop="5dp"
-            />
+            android:text="Henrique Pires"
+            android:textColor="@color/dark"
+            android:textSize="22sp" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/perfil_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nome_definicoes"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@+id/tv_nome_definicoes"
             android:layout_marginTop="50dp">
 
             <RelativeLayout
@@ -58,22 +57,21 @@
                     android:id="@+id/tv_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perfil"
-                    android:textSize="20sp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="Perfil"
                     android:textColor="@color/dark"
-                    android:layout_marginTop="20dp"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/tv_nome_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nome"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/tv_perfil"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"
-                    />
+                    android:text="Nome"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/et_nome_perfil"
@@ -82,19 +80,18 @@
                     android:layout_below="@+id/tv_nome_perfil"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:textSize="16sp"
-                    android:text="Henrique Pires"/>
+                    android:text="Henrique Pires"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_email_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/et_nome_perfil"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
-                    />
+                    android:text="Email"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/et_email_perfil"
@@ -103,30 +100,29 @@
                     android:layout_below="@+id/tv_email_perfil"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:textSize="16sp"
-                    android:text="henrique.pires@bee-eng.pt"/>
+                    android:text="henrique.pires@bee-eng.pt"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_tlm_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Telemóvel"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/et_email_perfil"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
-                    />
+                    android:text="Telemóvel"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/et_tlm_perfil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_tlm_perfil"
+                    android:layout_marginBottom="30dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:textSize="16sp"
                     android:text="913748956"
-                    android:layout_marginBottom="30dp"/>
+                    android:textSize="16sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -134,10 +130,10 @@
             android:id="@+id/notificacoes_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/perfil_card"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_below="@+id/perfil_card">
+            android:layout_marginTop="40dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -147,21 +143,22 @@
                     android:id="@+id/tv_notificacoes_definicoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
                     android:text="Notificações"
                     android:textColor="@color/dark"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="20sp"
-                    android:layout_marginTop="20dp"/>
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:id="@+id/linearlayout_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_below="@+id/tv_notificacoes_definicoes"
-                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -171,8 +168,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Receber notificação quando tiver uma oferta de troca de turno"
-                            android:textColor="@color/dark"
-                            />
+                            android:textColor="@color/dark" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -185,8 +181,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:theme="@style/SCBSwitch"
-                            />
+                            android:theme="@style/SCBSwitch" />
 
                     </RelativeLayout>
                 </LinearLayout>
@@ -194,12 +189,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_below="@+id/linearlayout_1"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -209,8 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Receber notificação por email quando tiver uma oferta de troca de turno"
-                            android:textColor="@color/dark"
-                            />
+                            android:textColor="@color/dark" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -223,8 +218,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:theme="@style/SCBSwitch"
-                            />
+                            android:theme="@style/SCBSwitch" />
 
                     </RelativeLayout>
 
@@ -233,16 +227,17 @@
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
-        
+
         <android.support.v7.widget.CardView
             android:layout_width="170dp"
             android:layout_height="40dp"
-            android:backgroundTint="@color/colorAccent"
-            app:cardCornerRadius="18dp"
             android:layout_below="@+id/notificacoes_card"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp">
+            android:backgroundTint="@color/colorAccent"
+            app:cardCornerRadius="18dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -250,10 +245,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:text="Guardar"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:layout_centerInParent="true"/>
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 

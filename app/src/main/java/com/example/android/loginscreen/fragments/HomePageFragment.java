@@ -9,11 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.android.loginscreen.R;
-import com.example.android.loginscreen.adapters.AprovesAdapter;
+import com.example.android.loginscreen.adapters.home.AprovesAdapter;
 import com.example.android.loginscreen.models.Aprove;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomePageFragment extends Fragment {
 

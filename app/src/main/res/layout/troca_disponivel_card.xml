@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_aprovacao_card"
+    android:id="@+id/layout_troca_disponivel"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_margin="5dp"
     android:layout_marginTop="20dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/im_foto"
+        android:id="@+id/troca_foto"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_margin="5dp"
         android:src="@drawable/dummyphoto1" />
 
     <TextView
-        android:id="@+id/tv_nome_foto"
+        android:id="@+id/troca_nome_foto"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/im_foto"
+        android:layout_below="@id/troca_foto"
         android:layout_marginStart="5dp"
         android:text="Quim Barreiros"
         android:textAlignment="center"
@@ -26,23 +26,23 @@
         android:textSize="12sp" />
 
     <ImageView
-        android:id="@+id/im_barra_vertical"
+        android:id="@+id/troca_barra_vertical"
         android:layout_width="1dp"
         android:layout_height="95dp"
         android:layout_marginTop="2.5dp"
-        android:layout_toEndOf="@+id/tv_nome_foto"
+        android:layout_toEndOf="@+id/troca_nome_foto"
         android:background="@color/dark" />
 
     <LinearLayout
         android:id="@+id/ll_layout_textos"
         android:layout_width="160dp"
         android:layout_height="match_parent"
-        android:layout_toEndOf="@id/im_barra_vertical"
+        android:layout_toEndOf="@id/troca_barra_vertical"
         android:orientation="vertical"
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/turno_aprove"
+            android:id="@+id/troca_turno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
@@ -51,7 +51,7 @@
             android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/data_aprove"
+            android:id="@+id/troca_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Terça Feira dia 21 de Maio de 2018"
@@ -59,7 +59,7 @@
             android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/preferencia_aprove"
+            android:id="@+id/troca_preferencia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Preferencia: noite"
@@ -74,7 +74,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_toEndOf="@+id/ll_layout_textos"
-        app:cardBackgroundColor="@color/cardBlue"
+        app:cardBackgroundColor="@color/colorEspera"
         app:cardCornerRadius="2dp"
         app:cardElevation="1dp">
 
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Pendente"
+                android:text="À espera"
                 android:textColor="@color/white"
                 android:textSize="10sp" />
         </RelativeLayout>

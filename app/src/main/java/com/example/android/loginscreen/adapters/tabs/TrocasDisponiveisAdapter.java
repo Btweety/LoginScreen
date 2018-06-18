@@ -1,4 +1,4 @@
-package com.example.android.loginscreen.adapters;
+package com.example.android.loginscreen.adapters.tabs;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -16,12 +16,12 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveViewHolder> {
+public class TrocasDisponiveisAdapter extends RecyclerView.Adapter<com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter.TrocaViewHolder> {
     private List<Aprove> aproves;
     private int rowLayout;
     private Context context;
 
-    public static class AproveViewHolder extends RecyclerView.ViewHolder {
+    public static class TrocaViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout aproveLayout;
         CircleImageView foto;
         TextView nome;
@@ -29,34 +29,34 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
         TextView data;
         TextView preferencia;
 
-        public AproveViewHolder(View v) {
+        public TrocaViewHolder(View v) {
             super(v);
-            aproveLayout = v.findViewById(R.id.layout_aprovacao_card);
-            foto = v.findViewById(R.id.im_foto);
-            nome = v.findViewById(R.id.tv_nome_foto);
-            turno = v.findViewById(R.id.turno_aprove);
-            data = v.findViewById(R.id.data_aprove);
-            preferencia = v.findViewById(R.id.preferencia_aprove);
+            aproveLayout = v.findViewById(R.id.layout_troca_disponivel);
+            foto = v.findViewById(R.id.troca_foto);
+            nome = v.findViewById(R.id.troca_nome_foto);
+            turno = v.findViewById(R.id.troca_turno);
+            data = v.findViewById(R.id.troca_data);
+            preferencia = v.findViewById(R.id.troca_preferencia);
         }
 
     }
 
-    public AprovesAdapter(List<Aprove> aproves, int rowLayout, Context context) {
+    public TrocasDisponiveisAdapter(List<Aprove> aproves, int rowLayout, Context context) {
         this.aproves = aproves;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public AprovesAdapter.AproveViewHolder onCreateViewHolder(ViewGroup parent,
-                                                            int viewType) {
+    public com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter.TrocaViewHolder onCreateViewHolder(ViewGroup parent,
+                                                                                                            int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new AproveViewHolder(view);
+        return new com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter.TrocaViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(AproveViewHolder holder, final int position) {
+    public void onBindViewHolder(com.example.android.loginscreen.adapters.tabs.TrocasDisponiveisAdapter.TrocaViewHolder holder, final int position) {
 
         Picasso.with(context).load(aproves.get(position).getUserFoto()).fit().centerCrop().into(holder.foto);
         holder.nome.setText(aproves.get(position).getUserName());
@@ -71,6 +71,4 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
     public int getItemCount() {
         return aproves.size();
     }
-
-
 }
