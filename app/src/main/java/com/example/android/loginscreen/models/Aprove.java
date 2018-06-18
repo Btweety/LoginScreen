@@ -5,6 +5,7 @@ public class Aprove {
     private String userFoto, userName, turno, data, preferencia;
     private boolean isAproved;
 
+    /** contrutor sem o boolean **/
     public Aprove(String userFoto, String userName, String turno, String data, String preferencia) {
         this.userFoto = userFoto;
         this.userName = userName;
@@ -12,6 +13,7 @@ public class Aprove {
         this.data = data;
         this.preferencia = preferencia;
     }
+    /** contrutor com o boolean **/
     public Aprove(String userFoto, String userName, String turno, String data, String preferencia, boolean isAproved) {
         this.userFoto = userFoto;
         this.userName = userName;
@@ -21,9 +23,7 @@ public class Aprove {
         this.isAproved = isAproved;
     }
 
-    public boolean isAproved() {
-        return isAproved;
-    }
+    public boolean isAproved() { return isAproved; }
 
     public void setAproved(boolean aproved) {
         isAproved = aproved;

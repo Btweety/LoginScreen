@@ -20,6 +20,7 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
     private int rowLayout;
     private Context context;
 
+    /** Obter uma ligaçao directa para cada elemento do Layout **/
     public static class RecenteViewHolder extends RecyclerView.ViewHolder {
         RelativeLayout aproveLayout;
         CircleImageView foto;
@@ -30,6 +31,7 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
         CardView cardAceitar;
         TextView aceitaRejeita;
 
+        /** construtor que afeta cada variável com o valor da seu layout **/
         public RecenteViewHolder(View v) {
             super(v);
             aproveLayout = v.findViewById(R.id.layout_pedidos_recentes);
@@ -41,7 +43,6 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
             cardAceitar = v.findViewById(R.id.card_recente);
             aceitaRejeita = v.findViewById(R.id.tv_isAproved);
         }
-
     }
 
     public PedidosRecentesAdapter(List<Aprove> pedidosRecentes, int rowLayout, Context context) {
@@ -50,6 +51,7 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
         this.context = context;
     }
 
+    /**  "enche" o layout e retorna o holder **/
     @Override
     public com.example.android.loginscreen.adapters.tabs.PedidosRecentesAdapter.RecenteViewHolder onCreateViewHolder(ViewGroup parent,
                                                                                                                      int viewType) {
@@ -57,7 +59,7 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
         return new com.example.android.loginscreen.adapters.tabs.PedidosRecentesAdapter.RecenteViewHolder(view);
     }
 
-
+    /** definir os atributos do layout com base na informação obtida **/
     @Override
     public void onBindViewHolder(com.example.android.loginscreen.adapters.tabs.PedidosRecentesAdapter.RecenteViewHolder holder, final int position) {
         Picasso.with(context).load(pedidosRecentes.get(position).getUserFoto()).fit().centerCrop().into(holder.foto);
@@ -76,6 +78,7 @@ public class PedidosRecentesAdapter extends RecyclerView.Adapter<com.example.and
         }
     }
 
+    /** numero de items**/
     @Override
     public int getItemCount() {
         return pedidosRecentes.size();

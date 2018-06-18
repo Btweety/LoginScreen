@@ -51,9 +51,9 @@ public class PedidosTrocaFragment extends Fragment {
             listaDeAproves.add(new Aprove(userFoto, userName, turno, data, preferencia));
             listaDeAprovesEspera.add(new Aprove(userFoto, userName, turno, data, preferencia, isAproved));
         }
-
         recyclerView.setAdapter(new TrocasDisponiveisAdapter(listaDeAproves, R.layout.troca_disponivel_card, getContext()));
 
+        /** Selecionar que layout carregar com base no menu escolhido **/
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -75,15 +75,12 @@ public class PedidosTrocaFragment extends Fragment {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
-
         return view;
     }
 }
