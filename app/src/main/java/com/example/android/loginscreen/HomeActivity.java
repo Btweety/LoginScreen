@@ -21,6 +21,7 @@ import com.example.android.loginscreen.fragments.DefinicoesFragment;
 import com.example.android.loginscreen.fragments.HomePageFragment;
 import com.example.android.loginscreen.fragments.HorariosFragment;
 import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -81,6 +82,12 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.nav_item_settings:
                         fragmentClass = DefinicoesFragment.class;
                         break;
+                    case R.id.nav_item_logout:
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
+                        startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                        break;
+
                 }
                 /** instanciar o fragmento **/
                 try {
@@ -110,6 +117,8 @@ public class HomeActivity extends AppCompatActivity {
     public boolean moveDatabaseFrom(Context sourceContext, String name) {
         return super.moveDatabaseFrom(sourceContext, name);
     }
+
+
 
     private void initialize(){
         navigationView = findViewById(R.id.navView);
