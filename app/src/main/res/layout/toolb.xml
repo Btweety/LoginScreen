@@ -31,10 +31,5 @@
             android:layout_alignParentEnd="true"
             android:paddingEnd="20dp"
             />
-
-
     </RelativeLayout>
-
-
-
 </android.support.v7.widget.Toolbar>

@@ -30,23 +30,27 @@ public class HorariosFragment extends Fragment {
 
         calendarView = view.findViewById(R.id.calendarView);
 
+        /** Obter a data do dia clicado e instanciar a activity do horario diario **/
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+
+                /** obter data do dia **/
                 data = Calendar.getInstance();
                 data.set(Calendar.YEAR, year);
                 data.set(Calendar.MONTH, month);
                 data.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
+                /** converter a data para String por forma a ser enviada para a activity seguinte **/
                 long proximaActivity = data.getTimeInMillis();
                 String proximaActivityString = Long.toString(proximaActivity);
 
+                /** instanciar a nova activity e enviar a data (em formato String) **/
                 Intent intent = new Intent(getContext(), DiaHorarioActivity.class);
                 intent.putExtra("Data", proximaActivityString);
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }
