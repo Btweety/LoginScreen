@@ -17,6 +17,7 @@ import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
 import android.view.MenuItem;
 
+import com.example.android.loginscreen.fragments.DefinicoesFragment;
 import com.example.android.loginscreen.fragments.HomePageFragment;
 import com.example.android.loginscreen.fragments.HorariosFragment;
 import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
@@ -76,6 +77,9 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_item_teste2:
                         startActivity(new Intent(HomeActivity.this, SubmeterTrocaActivity.class));
+                        break;
+                    case R.id.nav_item_settings:
+                        fragmentClass = DefinicoesFragment.class;
                         break;
                 }
                 /** instanciar o fragmento **/

@@ -9,4 +9,5 @@
     <color name="cardAceitar">#6fcf97</color>
     <color name="cardRejeitar">#df4f3d</color>
     <color name="colorTransparent">#00ffffff</color>
+    <color name="colorSwitch">#009688</color>
 </resources>
