@@ -11,4 +11,5 @@
     <color name="colorTransparent">#00ffffff</color>
     <color name="colorSwitch">#009688</color>
     <color name="colorEspera">#63bede</color>
+    <color name="notificationRed">#fb6262</color>
 </resources>
