@@ -16,6 +16,7 @@
     <style name="tabelaGreySemana" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:padding">4dp</item>
         <item name="android:textSize">14sp</item>
@@ -26,6 +27,7 @@
     <style name="tabelaGreyDia" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:textSize">12sp</item>
     </style>
@@ -35,6 +37,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/cell_center_light</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">4dp</item>
         <item name="android:textSize">12sp</item>
@@ -47,6 +50,7 @@
     <style name="tabelaDarkBlueCenter" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/cell_center_dark</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">4dp</item>
@@ -60,6 +64,7 @@
     <style name="tabelaLightBlueBottom" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:padding">4dp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textSize">12sp</item>
@@ -72,12 +77,13 @@
     <style name="linLayout" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_marginEnd">1dp</item>
         <item name="android:layout_marginStart">1dp</item>
     </style>
 
-    <!-- Estilo do linear layout do header da tabela -->
+    <!-- Estilo dos cartoes a usar no recyclerview -->
     <style name="cardviews" parent="AppTheme">
         <item name="android:layout_width">57dp</item>
         <item name="android:layout_height">22dp</item>
