@@ -117,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/cardConf"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:paddingBottom="18dp"
         android:backgroundTint="@color/white"
         android:ems="10"
