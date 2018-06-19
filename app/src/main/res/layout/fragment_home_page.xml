@@ -121,7 +121,6 @@
                         style="@style/tabelaGreyDia"
                         android:text="Dia 13"/>
                 </LinearLayout>
-
             </TableRow>
 
             <TableRow
