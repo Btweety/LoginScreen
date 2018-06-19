@@ -16,12 +16,25 @@ import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.android.loginscreen.fragments.DefinicoesFragment;
 import com.example.android.loginscreen.fragments.HomePageFragment;
 import com.example.android.loginscreen.fragments.HorariosFragment;
 import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -55,6 +68,20 @@ public class HomeActivity extends AppCompatActivity {
             s.setSpan(new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER), 0, s.length(), 0);
             item.setTitle(s);
         }
+
+
+        /** Prepara o header do navigation drawer para ser chamado, de modo a podermos fazer findViewById nos elementos que lá estão */
+        View header = navigationView.getHeaderView(0) ;
+
+        /** Instanciar o spinner, criar uma lista de empresas, adicionar a lista a um ArrayAdapter e meter esse adapter no spinner para que apareçam as empresas */
+        Spinner spinner = header.findViewById(R.id.spinner_empresas);
+        String[] empresas = new String[] { "Empresa 1", "Empresa 2", "Empresa 3", "Empresa 4"};
+        ArrayList<String> listaEmpresas = new ArrayList<>();
+        Collections.addAll(listaEmpresas, empresas);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(HomeActivity.this, android.R.layout.simple_list_item_1, listaEmpresas);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
+
 
         /** Instancia o fragmento correspondente à opção do menu **/
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

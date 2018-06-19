@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
+        android:id="@+id/header_cima"
         android:layout_width="match_parent"
         android:layout_height="120dp">
 
-        <TextView
-            android:id="@+id/tvNomeEmpresa"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:drawableEnd="@drawable/showmore"
-            android:drawablePadding="16dp"
-            android:paddingStart="48dp"
-            android:text="@string/nome_da_empresa"
-            android:textAlignment="center"
-            android:textColor="@color/dark"
-            android:textSize="20sp" />
+            android:layout_centerInParent="true">
+
+            <!--
+            <TextView
+                android:id="@+id/tvNomeEmpresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nome_da_empresa"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/dark"
+                android:textSize="20sp" />
+                android:drawableEnd="@drawable/showmore"
+                android:drawablePadding="16dp"
+                android:paddingStart="48dp" -->
+
+            <Spinner
+                android:id="@+id/spinner_empresas"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:theme="@style/spinner" />
+
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
+
 
 </RelativeLayout>
