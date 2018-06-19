@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_notifications_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_settings_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,10 +33,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="imageAsset" value="C:\Users\bernardo.castelo\Desktop\dummyphoto1.jpg" />
-                                      <entry key="outputName" value="dummyphoto1" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="outputName" value="settings_icon" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
