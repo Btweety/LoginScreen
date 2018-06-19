@@ -32,10 +32,10 @@ public class HomePageFragment extends Fragment {
         ArrayList<Aprove> listaDeAproves = new ArrayList<Aprove>();
         for (int i = 0; i < 6; i++){
             String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
-            String userName = "Pedro " + i;
+            String userName = "Pedro António " + i;
             String turno = "Turno da manhã " + i;
-            String data = "26 de Maio " + i;
-            String preferencia = "Tarde " + i;
+            String data = "Terça-feira, 26 de Maio " + i;
+            String preferencia = "Preferência: Tarde " + i;
             listaDeAproves.add(new Aprove(userFoto, userName, turno, data, preferencia));
         }
 
