@@ -133,27 +133,27 @@
                 <TextView
                     android:id="@+id/tv_termanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="ter\nManha" />
+                    android:text="   \n  " />
                 <TextView
                     android:id="@+id/tv_quamanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="qua\nManha" />
+                    android:text="  \n  " />
                 <TextView
                     android:id="@+id/tv_quimanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="qui\nManha"/>
+                    android:text="Manhã\nBee  "/>
                 <TextView
                     android:id="@+id/tv_sexmanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="sex\nManha" />
+                    android:text="Manhã\nBee" />
                 <TextView
                     android:id="@+id/tv_sabmanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="sab\nManha"/>
+                    android:text="  \n  "/>
                 <TextView
                     android:id="@+id/tv_dommanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="dom\nManha"/>
+                    android:text="  \n  "/>
             </TableRow>
 
             <TableRow
@@ -165,27 +165,27 @@
                 <TextView
                     android:id="@+id/tv_tertarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="ter\ntarde"/>
+                    android:text="  \n  "/>
                 <TextView
                     android:id="@+id/tv_quatarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="qua\ntarde"/>
+                    android:text="Tarde\nBee"/>
                 <TextView
                     android:id="@+id/tv_quitarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="qui\ntarde"/>
+                    android:text="  \n  "/>
                 <TextView
                     android:id="@+id/tv_sextarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="sex\ntarde"/>
+                    android:text="Tarde\nBee"/>
                 <TextView
                     android:id="@+id/tv_sabtarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="sab\ntarde"/>
+                    android:text="Tarde\nAcademy"/>
                 <TextView
                     android:id="@+id/tv_domtarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="dom\ntarde"/>
+                    android:text="  \n  "/>
             </TableRow>
 
             <TableRow
@@ -193,38 +193,38 @@
                 <TextView
                     android:id="@+id/tv_segnoite"
                     android:background="@drawable/cell_bottom_left"
-                    android:text="seg\nNoite"
+                    android:text="  \n  "
                     style="@style/tabelaLightBlueBottom"/>
 
                 <TextView
                     android:id="@+id/tv_ternoite"
                     android:background="@drawable/cell_center_light"
-                    android:text="ter\nNoite"
+                    android:text="  \n  "
                     style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_quanoite"
                     android:background="@drawable/cell_center_light"
-                    android:text="qua\nNoite"
+                    android:text="Noite\nAcademy"
                     style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_quinoite"
                     android:background="@drawable/cell_center_light"
-                    android:text="qui\nNoite"
+                    android:text="Noite\nAcademy"
                     style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_sexnoite"
                     android:background="@drawable/cell_center_light"
-                    android:text="sex\nNoite"
+                    android:text="  \n  "
                     style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_sabnoite"
                     android:background="@drawable/cell_center_light"
-                    android:text="sab\nNoite"
+                    android:text="  \n  "
                     style="@style/tabelaLightBlueBottom"/>
                 <TextView
                     android:id="@+id/tv_domnoite"
                     android:background="@drawable/cell_bottom_right"
-                    android:text="dom\nNoite"
+                    android:text="  \n  "
                     style="@style/tabelaLightBlueBottom"/>
             </TableRow>
 

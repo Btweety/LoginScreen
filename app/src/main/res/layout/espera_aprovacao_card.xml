@@ -4,14 +4,17 @@
     android:id="@+id/layout_aprovacao_card"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:layout_margin="5dp"
-    android:layout_marginTop="20dp">
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/im_foto"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_margin="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="10dp"
         android:src="@drawable/dummyphoto1" />
 
     <TextView
@@ -19,17 +22,18 @@
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/im_foto"
-        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="3dp"
         android:text="Quim Barreiros"
         android:textAlignment="center"
         android:textColor="@color/dark"
-        android:textSize="12sp" />
+        android:textSize="12sp"/>
 
     <ImageView
         android:id="@+id/im_barra_vertical"
         android:layout_width="1dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="2.5dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/tv_nome_foto"
         android:background="@color/dark" />
 
@@ -46,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:text="Turno da Manha - 9h00 ás 13h00"
+            android:text="Turno da Manha 0"
             android:textColor="@color/dark"
             android:textSize="12sp" />
 
@@ -55,23 +59,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:text="Terça Feira dia 21 de Maio de 2018"
+            android:text="Terça Feira, 21 de Maio"
             android:textColor="@color/dark"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:layout_marginTop="9dp"/>
 
         <TextView
             android:id="@+id/preferencia_aprove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preferencia: noite"
+            android:text="Preferencia: Tarde"
             android:textColor="@color/dark"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_pendente"
         style="@style/cardviews"
-        app:cardBackgroundColor="@color/cardBlue">
+        app:cardBackgroundColor="@color/cardBlue"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
