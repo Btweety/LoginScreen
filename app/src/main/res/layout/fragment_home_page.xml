@@ -24,8 +24,9 @@
         <TableLayout
             android:id="@+id/tl_table"
             android:layout_width="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="true"
@@ -128,7 +129,7 @@
                 <TextView
                     android:id="@+id/tv_segmanha"
                     style="@style/tabelaLightBlueCenter"
-                    android:text="seg\nManha"/>
+                    android:text="Manhã\nBee"/>
                 <TextView
                     android:id="@+id/tv_termanha"
                     style="@style/tabelaLightBlueCenter"
@@ -160,7 +161,7 @@
                 <TextView
                     android:id="@+id/tv_segtarde"
                     style="@style/tabelaDarkBlueCenter"
-                    android:text="seg\nTarde"/>
+                    android:text="Tarde\nBee"/>
                 <TextView
                     android:id="@+id/tv_tertarde"
                     style="@style/tabelaDarkBlueCenter"
@@ -235,7 +236,7 @@
             android:layout_height="wrap_content"
             android:text="À espera da sua aprovação"
             android:textSize="22sp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:textColor="@color/dark"
             android:layout_centerHorizontal="true"/>
 
@@ -247,7 +248,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
             android:layout_below="@+id/tv_espera_confirmacao"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="40dp">
 
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"

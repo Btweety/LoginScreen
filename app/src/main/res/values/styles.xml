@@ -40,10 +40,10 @@
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">4dp</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-        <item name="android:layout_marginEnd">1dp</item>
-        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginEnd">0.5dp</item>
+        <item name="android:layout_marginStart">0.5dp</item>
     </style>
 
     <!-- Estilo da segunda linha da tabela (depois do header, azul escuro) -->
@@ -54,10 +54,10 @@
         <item name="android:background">@drawable/cell_center_dark</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">4dp</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-        <item name="android:layout_marginEnd">1dp</item>
-        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginEnd">0.5dp</item>
+        <item name="android:layout_marginStart">0.5dp</item>
     </style>
 
     <!-- Estilo da ultima linha da tabela -->
@@ -67,10 +67,10 @@
         <item name="android:layout_weight">1</item>
         <item name="android:padding">4dp</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-        <item name="android:layout_marginEnd">1dp</item>
-        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginEnd">0.5dp</item>
+        <item name="android:layout_marginStart">0.5dp</item>
     </style>
 
     <!-- Estilo do linear layout do header da tabela -->
