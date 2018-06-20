@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -29,6 +30,8 @@ import com.example.android.loginscreen.fragments.HorariosFragment;
 import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
@@ -47,7 +50,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
 
         /** Inicializar cada uma das variáveis com findViewById */
         initialize();
@@ -68,7 +70,6 @@ public class HomeActivity extends AppCompatActivity {
             s.setSpan(new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER), 0, s.length(), 0);
             item.setTitle(s);
         }
-
 
         /** Prepara o header do navigation drawer para ser chamado, de modo a podermos fazer findViewById nos elementos que lá estão */
         View header = navigationView.getHeaderView(0) ;
@@ -116,6 +117,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                 }
+
                 /** instanciar o fragmento **/
                 try {
                     fragment = (Fragment) fragmentClass.newInstance();
@@ -126,8 +128,6 @@ public class HomeActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-
 
                 /** fecha o menu **/
                 drawerLayout.closeDrawers();
@@ -145,11 +145,10 @@ public class HomeActivity extends AppCompatActivity {
         return super.moveDatabaseFrom(sourceContext, name);
     }
 
-
-
     private void initialize(){
         navigationView = findViewById(R.id.navView);
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.nav_action);
     }
+    
 }

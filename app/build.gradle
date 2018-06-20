@@ -33,8 +33,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.1'
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:design:27.1.1'
-
     implementation 'com.applandeo:material-calendar-view:1.4.0'
+
+    /** Spring */
+    implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
 
     /** Imagem circular */
     implementation 'de.hdodenhof:circleimageview:2.2.0'
