@@ -61,11 +61,11 @@
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/profile_image_left"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:src="@drawable/profile"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="20dp"/>
+                            android:layout_marginTop="30dp"/>
 
                         <TextView
                             android:id="@+id/nome_left"
@@ -73,7 +73,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/profile_image_left"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:text="Henrique Pires"
                             android:textSize="16sp"
                             android:maxLines="2"
@@ -126,11 +126,11 @@
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/profile_image_right"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:src="@drawable/profile"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="20dp"/>
+                            android:layout_marginTop="30dp"/>
 
                         <TextView
                             android:id="@+id/nome_right"
@@ -138,7 +138,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/profile_image_right"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:text="Joana Silva"
                             android:textSize="16sp"
                             android:maxLines="2"
@@ -242,7 +242,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/cardRejeitar"
                         android:layout_centerInParent="true"
-                        app:cardCornerRadius="10dp">
+                        app:cardCornerRadius="6dp">
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
@@ -252,8 +252,9 @@
                                 android:layout_height="wrap_content"
                                 android:text="Rejeitar Proposta"
                                 android:textColor="@color/white"
-                                android:textSize="18sp"
-                                android:textAlignment="center"/>
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:padding="3dp"/>
 
                         </RelativeLayout>
 
@@ -272,7 +273,7 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/cardAceitar"
                             android:layout_centerInParent="true"
-                            app:cardCornerRadius="10dp">
+                            app:cardCornerRadius="6dp">
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
@@ -282,8 +283,9 @@
                                     android:layout_height="wrap_content"
                                     android:text="Aceitar Proposta"
                                     android:textColor="@color/white"
-                                    android:textSize="18sp"
-                                    android:textAlignment="center"/>
+                                    android:textSize="15sp"
+                                    android:textAlignment="center"
+                                    android:padding="3dp"/>
 
                             </RelativeLayout>
 
