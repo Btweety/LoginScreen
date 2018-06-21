@@ -46,5 +46,8 @@ dependencies {
 
     /** Ler imagens */
     implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    /** Button Fixed */
+    implementation 'com.android.support:design:27.1.1'
 }
 apply plugin: 'com.google.gms.google-services'
