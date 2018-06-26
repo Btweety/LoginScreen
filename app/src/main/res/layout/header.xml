@@ -36,12 +36,6 @@
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"
                 android:theme="@style/spinner" />
-
-
         </RelativeLayout>
-
-
     </RelativeLayout>
-
-
 </RelativeLayout>

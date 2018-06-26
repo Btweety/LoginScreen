@@ -15,14 +15,10 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.example.android.loginscreen.fragments.DefinicoesFragment;
 import com.example.android.loginscreen.fragments.HomePageFragment;
@@ -30,14 +26,12 @@ import com.example.android.loginscreen.fragments.HorariosFragment;
 import com.example.android.loginscreen.fragments.PedidosTrocaFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.springframework.http.converter.StringHttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -83,7 +77,6 @@ public class HomeActivity extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
 
-
         /** Instancia o fragmento correspondente à opção do menu **/
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -115,7 +108,6 @@ public class HomeActivity extends AppCompatActivity {
                         finish();
                         startActivity(new Intent(HomeActivity.this, MainActivity.class));
                         break;
-
                 }
 
                 /** instanciar o fragmento **/
@@ -150,5 +142,4 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.nav_action);
     }
-    
 }

@@ -11,33 +11,32 @@
         android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/appbar">
-            <include
-                layout="@layout/toolb" />
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolb" />
         </android.support.design.widget.AppBarLayout>
 
         <TextView
             android:id="@+id/tv_numero_troca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/appbar"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:text="Troca nºX"
-            android:textSize="28sp"
             android:textColor="@color/dark"
-            />
+            android:textSize="28sp" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_pedidos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_numero_troca"
+            android:layout_marginBottom="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp"
-            android:layout_below="@+id/tv_numero_troca"
             android:layout_marginTop="20dp">
 
             <RelativeLayout
@@ -48,24 +47,22 @@
                     android:id="@+id/linear_layout_troca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false">
-
-
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
 
                     <RelativeLayout
+                        android:id="@+id/layout_esquerda"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/layout_esquerda"
                         android:layout_weight="1">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/profile_image_left"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/profile"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="30dp"/>
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/profile" />
 
                         <TextView
                             android:id="@+id/nome_left"
@@ -74,63 +71,62 @@
                             android:layout_below="@+id/profile_image_left"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Henrique Pires"
-                            android:textSize="16sp"
                             android:maxLines="2"
+                            android:text="Henrique Pires"
                             android:textAlignment="center"
-                            />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/turno_left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Turno da manhã"
                             android:layout_below="@id/nome_left"
-                            android:layout_marginTop="40dp"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/dark"/>
+                            android:layout_marginTop="40dp"
+                            android:text="Turno da manhã"
+                            android:textColor="@color/dark" />
+
                         <TextView
                             android:id="@+id/horas_left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="9h00 - 13h00"
                             android:layout_below="@id/turno_left"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/dark"/>
+                            android:text="9h00 - 13h00"
+                            android:textColor="@color/dark" />
+
                         <TextView
                             android:id="@+id/data_left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3ºf - 26 de Maio"
                             android:layout_below="@id/horas_left"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/dark"/>
+                            android:text="3ºf - 26 de Maio"
+                            android:textColor="@color/dark" />
 
                         <TextView
                             android:id="@+id/empresa_left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bee Engineering"
                             android:layout_below="@id/data_left"
                             android:layout_marginLeft="20dp"
-                            android:textColor="@color/dark"/>
-
+                            android:text="Bee Engineering"
+                            android:textColor="@color/dark" />
                     </RelativeLayout>
 
-
                     <RelativeLayout
+                        android:id="@+id/layout_direita"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/layout_direita"
                         android:layout_weight="1">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/profile_image_right"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/profile"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="30dp"/>
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/profile" />
 
                         <TextView
                             android:id="@+id/nome_right"
@@ -139,53 +135,51 @@
                             android:layout_below="@+id/profile_image_right"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Joana Silva"
-                            android:textSize="16sp"
                             android:maxLines="2"
+                            android:text="Joana Silva"
                             android:textAlignment="center"
-                            />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/turno_right"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Turno da manhã"
-                            android:layout_below="@id/nome_right"
-                            android:layout_marginTop="40dp"
-                            android:layout_marginRight="20dp"
-                            android:textColor="@color/dark"
                             android:layout_alignParentRight="true"
-                            />
+                            android:layout_below="@id/nome_right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="40dp"
+                            android:text="Turno da manhã"
+                            android:textColor="@color/dark" />
 
                         <TextView
                             android:id="@+id/horas_right"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="9h00 - 13h00"
+                            android:layout_alignParentRight="true"
                             android:layout_below="@id/turno_right"
                             android:layout_marginRight="20dp"
-                            android:textColor="@color/dark"
-                            android:layout_alignParentRight="true"/>
+                            android:text="9h00 - 13h00"
+                            android:textColor="@color/dark" />
 
                         <TextView
                             android:id="@+id/data_right"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3ºf - 26 de Maio"
+                            android:layout_alignParentRight="true"
                             android:layout_below="@id/horas_right"
                             android:layout_marginRight="20dp"
-                            android:textColor="@color/dark"
-                            android:layout_alignParentRight="true"/>
+                            android:text="3ºf - 26 de Maio"
+                            android:textColor="@color/dark" />
 
                         <TextView
                             android:id="@+id/empresa_right"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bee Engineering"
+                            android:layout_alignParentRight="true"
                             android:layout_below="@id/data_right"
                             android:layout_marginRight="20dp"
-                            android:textColor="@color/dark"
-                            android:layout_alignParentRight="true"/>
+                            android:text="Bee Engineering"
+                            android:textColor="@color/dark" />
 
                     </RelativeLayout>
 
@@ -195,72 +189,41 @@
 
                 <RelativeLayout
                     android:id="@+id/layout_info_adicionais"
-                    android:layout_below="@+id/linear_layout_troca"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_layout_troca">
 
                     <TextView
                         android:id="@+id/tv_info_adicionais"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
                         android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
                         android:text="Informações adicionais"
                         android:textColor="@color/dark"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_info_adicionais"
-                        android:maxLines="6"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20dp"
-                        android:textAlignment="center"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et dictum ligula, a fermentum turpis. Quisque maximus mi et turpis molestie suscipit. Nulla porta turpis eget est hendrerit, at pretium urna euismod. Phasellus luctus luctus orci, at tempus magna. Aliquam congue leo ut est semper"/>
+                        android:maxLines="6"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et dictum ligula, a fermentum turpis. Quisque maximus mi et turpis molestie suscipit. Nulla porta turpis eget est hendrerit, at pretium urna euismod. Phasellus luctus luctus orci, at tempus magna. Aliquam congue leo ut est semper"
+                        android:textAlignment="center" />
 
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:layout_below="@+id/layout_info_adicionais"
                     android:id="@+id/linear_layout_troca_cards"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:baselineAligned="false"
-                    android:layout_marginTop="20dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
                     android:layout_below="@+id/layout_info_adicionais"
-                    android:layout_weight="1">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/cardRejeitar"
-                        android:layout_centerInParent="true"
-                        app:cardCornerRadius="6dp">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rejeitar Proposta"
-                                android:textColor="@color/white"
-                                android:textSize="15sp"
-                                android:textAlignment="center"
-                                android:padding="3dp"/>
-
-                        </RelativeLayout>
-
-                    </android.support.v7.widget.CardView>
-
-                </RelativeLayout>
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -271,9 +234,10 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/cardAceitar"
                             android:layout_centerInParent="true"
+                            android:backgroundTint="@color/cardRejeitar"
                             app:cardCornerRadius="6dp">
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
@@ -281,11 +245,43 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Aceitar Proposta"
-                                    android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:padding="3dp"
+                                    android:text="Rejeitar Proposta"
                                     android:textAlignment="center"
-                                    android:padding="3dp"/>
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/layout_info_adicionais"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:backgroundTint="@color/cardAceitar"
+                            app:cardCornerRadius="6dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:text="Aceitar Proposta"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
 
                             </RelativeLayout>
 
