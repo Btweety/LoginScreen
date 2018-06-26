@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class HomePageFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private List<User> users = new ArrayList<>();
+    private Aprove aprove;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +41,8 @@ public class HomePageFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         /** Criar dados de teste para povoar a recyclerview a partir do seu adapter */
-        ArrayList<Aprove> listaDeAproves = new ArrayList<Aprove>();
+        final ArrayList<Aprove> listaDeAproves = new ArrayList<Aprove>();
+        /*
         for (int i = 0; i < 6; i++) {
             String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
             String userName = "Pedro António " + i;
@@ -48,15 +51,24 @@ public class HomePageFragment extends Fragment {
             String preferencia = "Preferência: Tarde " + i;
             listaDeAproves.add(new Aprove(userFoto, userName, turno, data, preferencia));
         }
-
+        */
+        final String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        Call<User> call = apiInterface.getUsers();
+        Call<User> call = apiInterface.getUserByEmail("badjoras@email.com");
 
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                users.add(response.body());
+                User user = response.body();
+                aprove = new Aprove(
+                        userFoto,
+                        user.getName(),
+                        "turno da manha",
+                        "Terça-feira, 26 de Maio ",
+                        "Preferencia " + user.getPreferencia());
+                Log.d("APROVE", user.getName());
+                Log.d("APROVE", user.getEmail());
             }
 
             @Override
@@ -64,6 +76,10 @@ public class HomePageFragment extends Fragment {
                 t.printStackTrace();
             }
         });
+
+        for(int i = 0; i < 10; i++){
+            listaDeAproves.add(aprove);
+        }
 
         /** Povoar a recyclerview */
         recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
