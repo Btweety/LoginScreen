@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.android.loginscreen.R;
 import com.example.android.loginscreen.adapters.home.AprovesAdapter;
+import com.example.android.loginscreen.adapters.home.UserAdapter;
 import com.example.android.loginscreen.database.models.User;
 import com.example.android.loginscreen.database.rest.APIClient;
 import com.example.android.loginscreen.database.rest.APIInterface;
@@ -27,7 +28,7 @@ public class HomePageFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private List<User> users = new ArrayList<>();
-    private Aprove aprove;
+    private User user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,16 +61,15 @@ public class HomePageFragment extends Fragment {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-              /*  User user = response.body();
-                aprove = new Aprove(
-                        userFoto,
-                        user.getName(),
-                        "turno da manha",
+              /*  User user = response.body(); */
+                user = new User(
+                        "https://cdn.pixabay.com/user/2015/01/20/20-56-42-330_250x250.jpg",
+                        response.body().getName(),
+                        "turno da",
                         "Terça-feira, 26 de Maio ",
-                        "Preferencia: " + user.getPreferencia());
-                Log.d("APROVE", user.getName());
-                Log.d("APROVE", user.getEmail());*/
-              
+                        "Preferencia: " + "lol");
+
+
                 Log.d("API", response.body().getName());
                 Log.d("API", response.body().getEmail());
             }
@@ -81,11 +81,11 @@ public class HomePageFragment extends Fragment {
         });
 
         for(int i = 0; i < 10; i++){
-            listaDeAproves.add(aprove);
+            users.add(user);
         }
 
         /** Povoar a recyclerview */
-        recyclerView.setAdapter(new AprovesAdapter(listaDeAproves, R.layout.espera_aprovacao_card, getContext()));
+        recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
         return view;
     }
 }
