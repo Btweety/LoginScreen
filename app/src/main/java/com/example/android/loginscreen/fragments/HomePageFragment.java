@@ -66,9 +66,11 @@ public class HomePageFragment extends Fragment {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 /*  User user = response.body(); */
-                ArrayList<Schedule> schedules = new ArrayList();
-                ArrayList<Empresa> empresas = new ArrayList();
-                ArrayList<History> histories = new ArrayList();
+                ArrayList<Schedule> schedules = response.body().getSchedules();
+                //schedules.add(response.body().getSchedules().get(0));
+
+                ArrayList<Empresa> empresas = response.body().getEmpresas();
+                ArrayList<History> histories = response.body().getHistory();
                 user = new User(
                         response.body().getId(),
                         response.body().getName(),
@@ -79,8 +81,8 @@ public class HomePageFragment extends Fragment {
                         response.body().getPreferencia(),
                         histories);
 
-                Log.d("API", response.body().getName());
-                Log.d("API", response.body().getEmail());
+                Log.d("API", user.getEmail());
+                Log.d("API", user.getName());
             }
 
             @Override
@@ -94,7 +96,7 @@ public class HomePageFragment extends Fragment {
         }
 
         /** Povoar a recyclerview */
-        // recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
+        recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
         return view;
     }
 }
