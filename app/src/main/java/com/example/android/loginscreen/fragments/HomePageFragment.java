@@ -32,7 +32,7 @@ public class HomePageFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private List<User> users = new ArrayList<>();
-    private User user;
+    private User user = new User();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,10 +65,7 @@ public class HomePageFragment extends Fragment {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                /*  User user = response.body(); */
                 ArrayList<Schedule> schedules = response.body().getSchedules();
-                //schedules.add(response.body().getSchedules().get(0));
-
                 ArrayList<Empresa> empresas = response.body().getEmpresas();
                 ArrayList<History> histories = response.body().getHistory();
                 user = new User(
@@ -80,9 +77,14 @@ public class HomePageFragment extends Fragment {
                         empresas,
                         response.body().getPreferencia(),
                         histories);
+                for (int i = 0; i < 10; i++) {
+                    users.add(user);
+                }
+                Log.e("API", user.getEmail());
+                Log.e("API", user.getName());
 
-                Log.d("API", user.getEmail());
-                Log.d("API", user.getName());
+                /** Povoar a recyclerview */
+                recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
             }
 
             @Override
@@ -90,13 +92,6 @@ public class HomePageFragment extends Fragment {
                 t.printStackTrace();
             }
         });
-
-        for (int i = 0; i < 10; i++) {
-            users.add(user);
-        }
-
-        /** Povoar a recyclerview */
-        recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
         return view;
     }
 }
