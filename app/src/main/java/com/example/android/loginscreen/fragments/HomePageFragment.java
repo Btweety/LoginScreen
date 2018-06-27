@@ -12,12 +12,16 @@ import android.view.ViewGroup;
 import com.example.android.loginscreen.R;
 import com.example.android.loginscreen.adapters.home.AprovesAdapter;
 import com.example.android.loginscreen.adapters.home.UserAdapter;
+import com.example.android.loginscreen.database.models.Empresa;
+import com.example.android.loginscreen.database.models.History;
+import com.example.android.loginscreen.database.models.Schedule;
 import com.example.android.loginscreen.database.models.User;
 import com.example.android.loginscreen.database.rest.APIClient;
 import com.example.android.loginscreen.database.rest.APIInterface;
 import com.example.android.loginscreen.models.Aprove;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -61,14 +65,19 @@ public class HomePageFragment extends Fragment {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-              /*  User user = response.body(); */
+                /*  User user = response.body(); */
+                ArrayList<Schedule> schedules = new ArrayList();
+                ArrayList<Empresa> empresas = new ArrayList();
+                ArrayList<History> histories = new ArrayList();
                 user = new User(
-                        "https://cdn.pixabay.com/user/2015/01/20/20-56-42-330_250x250.jpg",
+                        response.body().getId(),
                         response.body().getName(),
-                        "turno da",
-                        "Terça-feira, 26 de Maio ",
-                        "Preferencia: " + "lol");
-
+                        response.body().getEmail(),
+                        response.body().getTelnum(),
+                        schedules,
+                        empresas,
+                        response.body().getPreferencia(),
+                        histories);
 
                 Log.d("API", response.body().getName());
                 Log.d("API", response.body().getEmail());
@@ -80,12 +89,12 @@ public class HomePageFragment extends Fragment {
             }
         });
 
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             users.add(user);
         }
 
         /** Povoar a recyclerview */
-        recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
+        // recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
         return view;
     }
 }
