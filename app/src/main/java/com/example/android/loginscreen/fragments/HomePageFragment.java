@@ -80,8 +80,6 @@ public class HomePageFragment extends Fragment {
                 for (int i = 0; i < 10; i++) {
                     users.add(user);
                 }
-                Log.e("API", user.getEmail());
-                Log.e("API", user.getName());
 
                 /** Povoar a recyclerview */
                 recyclerView.setAdapter(new UserAdapter(users, R.layout.espera_aprovacao_card, getContext()));
