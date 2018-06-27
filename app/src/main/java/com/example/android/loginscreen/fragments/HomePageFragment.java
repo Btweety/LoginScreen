@@ -60,7 +60,7 @@ public class HomePageFragment extends Fragment {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                User user = response.body();
+              /*  User user = response.body();
                 aprove = new Aprove(
                         userFoto,
                         user.getName(),
@@ -68,7 +68,10 @@ public class HomePageFragment extends Fragment {
                         "Terça-feira, 26 de Maio ",
                         "Preferencia: " + user.getPreferencia());
                 Log.d("APROVE", user.getName());
-                Log.d("APROVE", user.getEmail());
+                Log.d("APROVE", user.getEmail());*/
+              
+                Log.d("API", response.body().getName());
+                Log.d("API", response.body().getEmail());
             }
 
             @Override
