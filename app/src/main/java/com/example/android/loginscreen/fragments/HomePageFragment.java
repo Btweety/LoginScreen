@@ -55,7 +55,7 @@ public class HomePageFragment extends Fragment {
         final String userFoto = "https://images.unsplash.com/photo-1520272820796-02e71f701951?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9810af68e5144e9a7ad27f6298e86587&auto=format&fit=crop&w=634&q=80";
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
 
-        Call<User> call = apiInterface.getUserByEmail("badjoras@email.com");
+        Call<User> call = apiInterface.getUserByEmail("henrique@email.com");
 
         call.enqueue(new Callback<User>() {
             @Override
@@ -66,7 +66,7 @@ public class HomePageFragment extends Fragment {
                         user.getName(),
                         "turno da manha",
                         "Terça-feira, 26 de Maio ",
-                        "Preferencia " + user.getPreferencia());
+                        "Preferencia: " + user.getPreferencia());
                 Log.d("APROVE", user.getName());
                 Log.d("APROVE", user.getEmail());
             }
