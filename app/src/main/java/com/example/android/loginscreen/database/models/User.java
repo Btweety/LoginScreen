@@ -15,8 +15,6 @@ public class User {
     private String preferencia;
     private ArrayList<History> history;
 
-    public User(String s, String name, String turno_da, String s1, String s2) {
-    }
 
     public User(ObjectId id, String name, String email, String telnum, ArrayList<Schedule> schedules, ArrayList<Empresa> empresas, String preferencia, ArrayList<History> history) {
         this.id = id;
