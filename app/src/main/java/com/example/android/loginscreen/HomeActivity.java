@@ -75,6 +75,10 @@ public class HomeActivity extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
 
+        /** Obter o user criado em MainActivity*/
+        Intent intent = getIntent();
+        user = (User) intent.getSerializableExtra("user");
+
         /** Instancia o fragmento correspondente à opção do menu **/
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -110,7 +114,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 /** instanciar o fragmento **/
                 try {
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("user", user);
                     fragment = (Fragment) fragmentClass.newInstance();
+                    fragment.setArguments(bundle);
 
                     /** colocar o fragmento no container da pagina principal **/
                     FragmentManager fragmentManager = getSupportFragmentManager();

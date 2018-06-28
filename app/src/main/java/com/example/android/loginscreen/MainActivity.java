@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
 
                             User user = getUser(firebaseAuth);
+                            /** ToDo: meter um loading screen aqui*/
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             intent.putExtra("user", user);
                             finish();
