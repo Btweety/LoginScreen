@@ -57,9 +57,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
         try{
             holder.nome.setText(users.get(position).getName());
+            holder.nome.setText(users.get(position).getName());
+            /** TODO: holder.turno.setText(users.get(position).getTurno()); */
+            /** TODO: holder.data.setText(users.get(position).getData()); */
+            holder.preferencia.setText(users.get(position).getPreferencia());
         }catch (NullPointerException e){
             Log.d("ERRO API", e.getMessage());
-            holder.nome.setText("Galinha");
         }
 
 

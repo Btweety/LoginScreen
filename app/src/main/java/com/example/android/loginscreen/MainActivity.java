@@ -55,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Introduza a Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                /**
+                 * Login firebase
+                 */
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
