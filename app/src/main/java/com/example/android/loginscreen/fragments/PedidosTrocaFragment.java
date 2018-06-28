@@ -1,8 +1,9 @@
 package com.example.android.loginscreen.fragments;
 
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import com.example.android.loginscreen.AdicionarTrocaActivity;
 import com.example.android.loginscreen.R;
 import com.example.android.loginscreen.adapters.home.AprovesAdapter;
 import com.example.android.loginscreen.adapters.tabs.PedidosRecentesAdapter;
@@ -23,6 +26,7 @@ public class PedidosTrocaFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private TabLayout tabLayout;
+    private FloatingActionButton myFAB;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +35,16 @@ public class PedidosTrocaFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.pedidos_recycler);
         tabLayout = view.findViewById(R.id.tablayout_pedidos);
+        myFAB = view.findViewById(R.id.myFAB);
+
+        myFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), AdicionarTrocaActivity.class));
+
+
+            }
+        });
 
         /** Dar um tipo de layout à recyclerview */
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(),1);
@@ -81,6 +95,11 @@ public class PedidosTrocaFragment extends Fragment {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+
+
         return view;
     }
+
+
 }

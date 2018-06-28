@@ -15,17 +15,6 @@
             android:layout_height="wrap_content"
             android:focusableInTouchMode="true">
 
-            <!-- Float Botão  -
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab"
-                android:src="@drawable/add_button"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginRight="20dp"/>
-                -->
-
             <TextView
                 android:id="@+id/tv_pedidos_troca"
                 android:layout_width="wrap_content"
@@ -119,7 +108,7 @@
         android:layout_margin="10dp">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/myFAB"
             android:src="@drawable/add_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
