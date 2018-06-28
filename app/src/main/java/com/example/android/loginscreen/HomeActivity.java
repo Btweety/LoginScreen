@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -79,10 +78,6 @@ public class HomeActivity extends AppCompatActivity {
         /** Obter o user criado em MainActivity*/
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("user");
-        if (user == null) {
-            Log.e("HomeActivity", "NULL USER");
-        }
-        Log.e("HomeActivity", user.getEmail());
 
         /** Instancia o fragmento correspondente à opção do menu **/
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

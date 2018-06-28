@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
         /**Verificar se algum utilizador já está logged in e se estiver mandá-lo automaticamente para a Home Activity */
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null) {
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
             getuserdostuff();
-            finish();
         }
 
         /** botão de login */
