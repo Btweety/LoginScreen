@@ -1,9 +1,11 @@
 package com.example.android.loginscreen.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +25,15 @@ public class DefinicoesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_definicoes, container, false);
-        initialize();
+        initialize(view);
 
-        Bundle bundle = new Bundle();
-        user = (User) bundle.getSerializable("user");
+        try {
+            Intent intent = getActivity().getIntent();
+            user = (User) intent.getSerializableExtra("user");
+            Log.e("Definicoes Sem Erro", user.getName());
+        }catch (NullPointerException e){
+            Log.e("Definicoes Erro", e.getMessage());
+        }
 
         et_nome_perfil.setText(user.getName());
         et_email_perfil.setText(user.getEmail());
@@ -43,13 +50,13 @@ public class DefinicoesFragment extends Fragment {
         return view;
     }
 
-    public void initialize() {
-        et_nome_perfil = getView().findViewById(R.id.et_nome_perfil);
-        et_email_perfil = getView().findViewById(R.id.et_email_perfil);
-        et_tlm_perfil = getView().findViewById(R.id.et_tlm_perfil);
-        ofertaTrocaTurno = getView().findViewById(R.id.switch_oferta_turno);
-        getOfertaTrocaTurnoEmail = getView().findViewById(R.id.switch_oferta_email);
-        cv_saveBtn = getView().findViewById(R.id.cv_savebtn);
+    public void initialize(View view) {
+        et_nome_perfil = view.findViewById(R.id.et_nome_perfil);
+        et_email_perfil = view.findViewById(R.id.et_email_perfil);
+        et_tlm_perfil = view.findViewById(R.id.et_tlm_perfil);
+        ofertaTrocaTurno = view.findViewById(R.id.switch_oferta_turno);
+        getOfertaTrocaTurnoEmail = view.findViewById(R.id.switch_oferta_email);
+        cv_saveBtn = view.findViewById(R.id.cv_savebtn);
     }
 
 }

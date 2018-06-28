@@ -1,6 +1,8 @@
 package com.example.android.loginscreen.database.models;
 
-public class Schedule {
+import java.io.Serializable;
+
+public class Schedule implements Serializable{
 
     private String idschedule;
     private String codempresa;

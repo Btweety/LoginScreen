@@ -1,8 +1,9 @@
 package com.example.android.loginscreen.database.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class History {
+public class History implements Serializable {
 
     private String idtroca;
     private String iduser;

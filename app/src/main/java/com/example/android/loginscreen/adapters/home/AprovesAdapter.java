@@ -55,11 +55,11 @@ public class AprovesAdapter extends RecyclerView.Adapter<AprovesAdapter.AproveVi
 
     @Override
     public void onBindViewHolder(AproveViewHolder holder, final int position) {
-        Picasso.with(context).load(aproves.get(position).getUserFoto()).fit().centerCrop().into(holder.foto);
+        Picasso.with(context).load(R.drawable.add_button).fit().centerCrop().into(holder.foto);
         holder.nome.setText(aproves.get(position).getUserName());
-        holder.turno.setText(aproves.get(position).getTurno());
-        holder.data.setText(aproves.get(position).getData());
-        holder.preferencia.setText(aproves.get(position).getPreferencia());
+        holder.turno.setText("turno");
+        holder.data.setText("data");
+        holder.preferencia.setText("data");
 
     }
     @Override

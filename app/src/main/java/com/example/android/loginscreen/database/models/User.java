@@ -1,5 +1,7 @@
 package com.example.android.loginscreen.database.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import org.bson.types.ObjectId;
 
 import java.io.Serializable;
@@ -7,13 +9,21 @@ import java.util.ArrayList;
 
 public class User implements Serializable {
 
+    @SerializedName("_id")
     private ObjectId id;
+    @SerializedName("name")
     private String name;
+    @SerializedName("email")
     private String email;
+    @SerializedName("telnum")
     private String telnum;
+    @SerializedName("schedules")
     private ArrayList<Schedule> schedules;
+    @SerializedName("empresas")
     private ArrayList<Empresa> empresas;
+    @SerializedName("preference")
     private String preferencia;
+    @SerializedName("history")
     private ArrayList<History> history;
 
     public User(){

@@ -1,8 +1,14 @@
 package com.example.android.loginscreen.database.models;
 
-public class Empresa {
+import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
+public class Empresa implements Serializable{
+
+    @SerializedName("codempresa")
     private String codempresa;
+    @SerializedName("nomeempresa")
     private String nomeempresa;
 
     public Empresa() {
