@@ -2,6 +2,7 @@ package com.example.android.loginscreen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.text.SpannableString;
@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.example.android.loginscreen.database.models.User;
 import com.example.android.loginscreen.fragments.DefinicoesFragment;
 import com.example.android.loginscreen.fragments.HomePageFragment;
 import com.example.android.loginscreen.fragments.HorariosFragment;
@@ -29,15 +30,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class HomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private Toolbar toolbar;
+    private User user;
     private NavigationView navigationView;
 
     @Override

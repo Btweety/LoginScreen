@@ -2,9 +2,10 @@ package com.example.android.loginscreen.database.models;
 
 import org.bson.types.ObjectId;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class User {
+public class User implements Serializable {
 
     private ObjectId id;
     private String name;
