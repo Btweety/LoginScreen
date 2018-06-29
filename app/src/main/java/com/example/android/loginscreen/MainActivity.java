@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,9 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         /**Verificar se algum utilizador já está logged in e se estiver mandá-lo automaticamente para a Home Activity */
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        if(user != null){
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
-            finish();
+        if (user != null) {
+            getuserdostuff();
         }
 
         /**
@@ -71,20 +71,14 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * Login firebase
                  */
+                /** Login firebase */
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             Toast.makeText(MainActivity.this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
-
-                            User user = getUser(firebaseAuth);
-                            /** ToDo: meter um loading screen aqui*/
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            intent.putExtra("user", user);
-                            finish();
-                            startActivity(intent);
-                        }
-                        else{
+                            getuserdostuff();
+                        } else {
                             Toast.makeText(MainActivity.this, "Email ou Password errados", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -123,12 +117,8 @@ public class MainActivity extends AppCompatActivity {
         tvesquecer = findViewById(R.id.tvEsquecer);
     }
 
-    /**
-     * Obter os dados do utilizador
-     **/
-    private User getUser(FirebaseAuth firebaseAuth) {
+    private void getuserdostuff() {
         String email = firebaseAuth.getCurrentUser().getEmail();
-
         APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
         Call<User> call = apiInterface.getUserByEmail(email);
         call.enqueue(new Callback<User>() {
@@ -137,24 +127,31 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<Schedule> schedules = response.body().getSchedules();
                 ArrayList<Empresa> empresas = response.body().getEmpresas();
                 ArrayList<History> histories = response.body().getHistory();
-                user = new User(
-                        response.body().getId(),
-                        response.body().getName(),
-                        response.body().getEmail(),
-                        response.body().getTelnum(),
-                        schedules,
-                        empresas,
-                        response.body().getPreferencia(),
-                        histories);
+                try {
+                    User user = new User(
+                            response.body().getId(),
+                            response.body().getName(),
+                            response.body().getEmail(),
+                            response.body().getTelnum(),
+                            schedules,
+                            empresas,
+                            response.body().getPreferencia(),
+                            histories);
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("user", user);
+                    finish();
+                    startActivity(intent);
+
+                } catch (NullPointerException e) {
+                    Log.e("ERRO API USER", e.toString());
+                }
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 t.printStackTrace();
+                Log.d("MainActivity", t.getMessage());
             }
         });
-        return user;
     }
-
-
 }

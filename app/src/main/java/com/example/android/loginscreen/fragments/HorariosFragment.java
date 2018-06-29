@@ -1,12 +1,9 @@
 package com.example.android.loginscreen.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.INotificationSideChannel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +13,6 @@ import com.example.android.loginscreen.DiaHorarioActivity;
 import com.example.android.loginscreen.R;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class HorariosFragment extends Fragment {
 
@@ -34,7 +30,6 @@ public class HorariosFragment extends Fragment {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-
                 /** obter data do dia **/
                 data = Calendar.getInstance();
                 data.set(Calendar.YEAR, year);
